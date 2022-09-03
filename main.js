@@ -1,3 +1,5 @@
+
+//ハンバーガーメニュー
 function hamburger() {
     document.getElementById('line1').classList.toggle('line_1');
     document.getElementById('line2').classList.toggle('line_2');
@@ -7,7 +9,13 @@ function hamburger() {
 document.getElementById('hamburger').addEventListener('click' , function () {
     hamburger();
 } );
+//ハンバーガーメニューおわり
 
+//たいとるアニメーション
+
+//たいとるアニメーションおわり
+
+//ビンゴ
 const COLUMN_LENGTH = 5;//縦の長さ
 const ROW_LENGTH = 5;
 let MAX_NUMBER = 24;//問題数
@@ -51,6 +59,7 @@ for(let i = 1; i <= MAX_NUMBER; i++){
 }
 
 let timerId;
+
 
 button.onclick = () => {
 

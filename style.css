@@ -9,6 +9,7 @@
     width: 95vw;
     height: 80px;
     position: fixed;
+    z-index: 1000;
 }
 
 #nav{
@@ -97,9 +98,39 @@
     gap: 25px;
 }
 
+.cardTitle{
+    text-align: center;
+    padding-bottom: 160px;
+    padding-top: 160px;
+}
+
+.title{
+    font-size:150px;
+}
+.posseimg{
+    width:150px;
+    height:auto;
+}
+
+@media screen and (max-width:400px){
+    .title{
+        font-size:50px;
+    }
+    .posseimg{
+        width:100px;
+        height:auto;
+    }
+}
+
+
+
+
+
+
 .card{
     background-color: bisque;
-    padding: 10px;
+    padding: 40px;
+    padding-top:160px;
     min-width:100px;
   }
   .outer{
@@ -108,6 +139,8 @@
     background:linear-gradient(45deg, #3bade3,#9844b7,#44ea76);/*グラデーションを定義*/
     background-size: 200% 200%;/*サイズを大きくひきのばす*/
     animation: bggradient 20s ease infinite;
+    width:70%;
+    margin:auto;
   }
   @keyframes bggradient{
     0% {
@@ -150,4 +183,14 @@
   .main{
     font-size: 100px;
     height: 150px;
+    text-align: center;
   }
+
+@media screen and (max-width:400px){
+    .card{
+        padding-top:40px;
+    }
+    .cardTitle{
+        padding-bottom: 50px;
+    }
+}
