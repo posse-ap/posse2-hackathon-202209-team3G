@@ -383,5 +383,9 @@ h2{
         height:120px;
         font-size:20px;
     }
+    .suggest{
+        font-size:14px;
+        font-weight:bold;
+    }
 }
 
