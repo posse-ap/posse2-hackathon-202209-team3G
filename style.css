@@ -268,7 +268,20 @@
     width:50%;
     text-align: center;
     margin:auto;
-  }
+}
+
+.suggest{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
   .outer{
     display:flex;
     flex-wrap: wrap;
