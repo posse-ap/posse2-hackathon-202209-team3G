@@ -41,6 +41,7 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
       divSquare.classList.toggle('gray');
       div.style.backgroundImage = `url(./img/bingoBack${i}.jpg)`;
       div.style.backgroundSize = 'contain';
+      div.textContent =''
   });
     div.textContent = i;
     // let targetIndex = Math.floor(Math.random() * targetNumber.length) ;     
