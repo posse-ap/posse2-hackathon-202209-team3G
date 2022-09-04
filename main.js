@@ -91,6 +91,13 @@ const suggestObj = {
 
 let timerId;
 
+// お題表示
+const bingo = document.querySelector('.card');
+bingo.insertAdjacentHTML('beforeend', `<div class="suggest"></div>`);
+const suggest = document.querySelector('.suggest');
+suggest.style.display = 'none';
+
+
 button.onclick = () => {
 
   if(targetNumber.length === 0){
@@ -113,9 +120,8 @@ button.onclick = () => {
     historyArray.push(main.textContent);
     history.textContent = historyArray;
 
-      // お題表示
-  const bingo = document.querySelector('.card');
-  bingo.insertAdjacentHTML('beforeend', `<div class="suggest">${suggestObj[targetIndex]}</div>`);
+  suggest.style.display = '';
+  suggest.innerHTML = `${suggestObj[targetIndex]}`;
   }
 
 }
