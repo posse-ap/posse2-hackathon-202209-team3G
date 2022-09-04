@@ -34,12 +34,15 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
     // div.textContent = 'free';
     div.style.backgroundImage = `url(./img/bingoBack13.jpg)`;
     div.style.backgroundSize = 'contain';
+    
   }else{
     divSquare.addEventListener('click', 
     function (){
+      div.classList.add('magic');
       div.style.backgroundImage = `url(./img/bingoBack${i}.jpg)`;
       div.style.backgroundSize = 'contain';
       div.textContent ='';
+<<<<<<< HEAD
       divSquare.classList.add('magic');
       if(divSquare1.classList.contains('magic') && divSquare2.classList.contains('magic') && divSquare3.classList.contains('magic') && divSquare4.classList.contains('magic') && divSquare5.classList.contains('magic')){
         console.log('成功');
@@ -78,6 +81,9 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
         console.log('成功');
       }
 
+=======
+      
+>>>>>>> cc8b8296f8c9ccbf8947c77c0e80ba8038b14ec8
   });
     div.textContent = i;
     // let targetIndex = Math.floor(Math.random() * targetNumber.length) ; 
