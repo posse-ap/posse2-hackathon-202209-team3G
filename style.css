@@ -11,6 +11,7 @@
     position: fixed;
 }
 
+/* ↓ここからハンバーガーメニュー */
 #nav{
     position: absolute;
     top: 0;
@@ -90,6 +91,7 @@
     transform: rotate(45deg);
     bottom: 0;
 }
+/* ↑ここまでハンバーガーメニュー */
 
 .header_list{
     display: flex;
@@ -127,10 +129,14 @@
     flex: 0 0 20%;
     position: relative;
   }
-  .outer .gray{
+  /* .outer .gray{
+    background-color: gray;
+  } */
+  
+  .gray{
     background-color: gray;
   }
-  
+
   .square::before{
     content: '';
     display: block;
