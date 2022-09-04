@@ -6,7 +6,7 @@ function hamburger() {
     document.getElementById('line3').classList.toggle('line_3');
     document.getElementById('nav').classList.toggle('in');
 }
-document.getElementById('hamburger').addEventListener('click' , function () {
+document.getElementById('hamburger').addEventListener('click' , function(){
     hamburger();
 } );
 //ハンバーガーメニューおわり
@@ -29,17 +29,56 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
   const divSquare = document.createElement('div');
   divSquare.classList.add(`square`,`square${i}`);
   let div = document.createElement('div');
-  if(i === Math.round(COLUMN_LENGTH * ROW_LENGTH /2) ){
+  if(i === Math.round(COLUMN_LENGTH * ROW_LENGTH /2)){
     // divSquare.classList.add('gray');
     // div.textContent = 'free';
     div.style.backgroundImage = `url(./img/bingoBack13.jpg)`;
     div.style.backgroundSize = 'contain';
+    
   }else{
     divSquare.addEventListener('click', 
     function (){
+      divSquare.classList.add('magic');
+      div.classList.add('bingoAnimation');
       div.style.backgroundImage = `url(./img/bingoBack${i}.jpg)`;
       div.style.backgroundSize = 'contain';
       div.textContent ='';
+      if(divSquare1.classList.contains('magic') && divSquare2.classList.contains('magic') && divSquare3.classList.contains('magic') && divSquare4.classList.contains('magic') && divSquare5.classList.contains('magic')){
+        console.log('成功');
+      }
+      if(divSquare6.classList.contains('magic') && divSquare7.classList.contains('magic') && divSquare8.classList.contains('magic') && divSquare9.classList.contains('magic') && divSquare10.classList.contains('magic')){
+        console.log('成功');
+      }
+      if(divSquare11.classList.contains('magic') && divSquare12.classList.contains('magic') && divSquare14.classList.contains('magic') && divSquare15.classList.contains('magic')){
+        console.log('成功');
+      }
+      if(divSquare16.classList.contains('magic') && divSquare17.classList.contains('magic') && divSquare18.classList.contains('magic') && divSquare19.classList.contains('magic') && divSquare20.classList.contains('magic')){
+        console.log('成功');
+      }
+      if(divSquare21.classList.contains('magic') && divSquare22.classList.contains('magic') && divSquare23.classList.contains('magic') && divSquare24.classList.contains('magic') && divSquare25.classList.contains('magic')){
+        console.log('成功');
+      }
+      if(divSquare1.classList.contains('magic') && divSquare6.classList.contains('magic') && divSquare11.classList.contains('magic') && divSquare16.classList.contains('magic') && divSquare21.classList.contains('magic')){
+        console.log('成功');
+      }
+      if(divSquare2.classList.contains('magic') && divSquare7.classList.contains('magic') && divSquare12.classList.contains('magic') && divSquare17.classList.contains('magic') && divSquare22.classList.contains('magic')){
+        console.log('成功');
+      }
+      if(divSquare3.classList.contains('magic') && divSquare8.classList.contains('magic') && divSquare18.classList.contains('magic') && divSquare23.classList.contains('magic')){
+        console.log('成功');
+      }
+      if(divSquare4.classList.contains('magic') && divSquare9.classList.contains('magic') && divSquare14.classList.contains('magic') && divSquare19.classList.contains('magic') && divSquare24.classList.contains('magic')){
+        console.log('成功');
+      }
+      if(divSquare5.classList.contains('magic') && divSquare10.classList.contains('magic') && divSquare15.classList.contains('magic') && divSquare20.classList.contains('magic') && divSquare25.classList.contains('magic')){
+        console.log('成功');
+      }
+      if(divSquare1.classList.contains('magic') && divSquare7.classList.contains('magic') && divSquare19.classList.contains('magic') && divSquare25.classList.contains('magic')){
+        console.log('成功');
+      }
+      if(divSquare5.classList.contains('magic') && divSquare9.classList.contains('magic') && divSquare17.classList.contains('magic') && divSquare21.classList.contains('magic')){
+        console.log('成功');
+      }
   });
     div.textContent = i;
     // let targetIndex = Math.floor(Math.random() * targetNumber.length) ; 
@@ -125,32 +164,29 @@ button.onclick = () => {
 
 }
 
-// const divSquare1 = document.querySelector('square1');
-// const divSquare2 = document.querySelector('square2');
-// const divSquare3 = document.querySelector('square3');
-// const divSquare4 = document.querySelector('square4');
-// const divSquare5 = document.querySelector('square5');
-// const divSquare6 = document.querySelector('square6');
-// const divSquare7 = document.querySelector('square7');
-// const divSquare8 = document.querySelector('square8');
-// const divSquare9 = document.querySelector('square9');
-// const divSquare10 = document.querySelector('square10');
-// const divSquare11 = document.querySelector('square11');
-// const divSquare12 = document.querySelector('square12');
-// const divSquare13 = document.querySelector('square13');
-// const divSquare14 = document.querySelector('square14');
-// const divSquare15 = document.querySelector('square15');
-// const divSquare16 = document.querySelector('square16');
-// const divSquare17 = document.querySelector('square17');
-// const divSquare18 = document.querySelector('square18');
-// const divSquare19 = document.querySelector('square19');
-// const divSquare20 = document.querySelector('square20');
-// const divSquare21 = document.querySelector('square21');
-// const divSquare22 = document.querySelector('square22');
-// const divSquare23 = document.querySelector('square23');
-// const divSquare24 = document.querySelector('square24');
-// const divSquare25 = document.querySelector('square25');
+const divSquare1 = document.querySelector('.square1');
+const divSquare2 = document.querySelector('.square2');
+const divSquare3 = document.querySelector('.square3');
+const divSquare4 = document.querySelector('.square4');
+const divSquare5 = document.querySelector('.square5');
+const divSquare6 = document.querySelector('.square6');
+const divSquare7 = document.querySelector('.square7');
+const divSquare8 = document.querySelector('.square8');
+const divSquare9 = document.querySelector('.square9');
+const divSquare10 = document.querySelector('.square10');
+const divSquare11 = document.querySelector('.square11');
+const divSquare12 = document.querySelector('.square12');
+const divSquare13 = document.querySelector('.square13');
+const divSquare14 = document.querySelector('.square14');
+const divSquare15 = document.querySelector('.square15');
+const divSquare16 = document.querySelector('.square16');
+const divSquare17 = document.querySelector('.square17');
+const divSquare18 = document.querySelector('.square18');
+const divSquare19 = document.querySelector('.square19');
+const divSquare20 = document.querySelector('.square20');
+const divSquare21 = document.querySelector('.square21');
+const divSquare22 = document.querySelector('.square22');
+const divSquare23 = document.querySelector('.square23');
+const divSquare24 = document.querySelector('.square24');
+const divSquare25 = document.querySelector('.square25');
 
-// if(divSquare1.classList.contains('gray') && divSquare2.classList.contains('gray') && divSquare3.classList.contains('gray') && divSquare4.classList.contains('gray') && divSquare5.classList.contains('gray')){
-//   outer.classList.add('gray');
-// }

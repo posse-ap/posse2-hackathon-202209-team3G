@@ -334,6 +334,16 @@
     text-align: center;
   }
 
+.bingoAnimation{
+    position:absolute;
+display:inline-block;
+transition:2s;
+transform:rotateY(360deg);
+transform:rotateY(0deg);
+transform:rotateY(0deg);
+transform:rotateY(-360deg);
+}
+
 .buttton{
     text-align: center;
 }
