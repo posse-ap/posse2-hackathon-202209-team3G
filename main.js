@@ -32,7 +32,7 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
   if(i === Math.round(COLUMN_LENGTH * ROW_LENGTH /2) ){
     // divSquare.classList.add('gray');
     // div.textContent = 'free';
-    div.style.backgroundImage = `url(./img/bingoBack13.jpg)`
+    div.style.backgroundImage = `url(./img/bingoBack13.jpg)`;
     div.style.backgroundSize = 'contain';
   }else{
     divSquare.addEventListener('click', 
