@@ -11,9 +11,6 @@ document.getElementById('hamburger').addEventListener('click' , function () {
 } );
 //ハンバーガーメニューおわり
 
-//たいとるアニメーション
-
-//たいとるアニメーションおわり
 
 //ビンゴ
 const COLUMN_LENGTH = 5;//縦の長さ
@@ -24,6 +21,8 @@ for(let i = 1; i <= MAX_NUMBER; i++){
   targetNumber.push(i);
 }
 
+
+
 const outer = document.getElementById('outer');
 
 for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
@@ -33,17 +32,20 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
   if(i === Math.round(COLUMN_LENGTH * ROW_LENGTH /2) ){
     // divSquare.classList.add('gray');
     // div.textContent = 'free';
-    div.style.backgroundImage = `url(./img/bingoBack13.jpg)`
+    div.style.backgroundImage = `url(./img/bingoBack13.jpg)`;
     div.style.backgroundSize = 'contain';
+    
   }else{
     divSquare.addEventListener('click', 
-    function(){
-      divSquare.classList.toggle('gray');
+    function (){
+      div.classList.add('magic');
       div.style.backgroundImage = `url(./img/bingoBack${i}.jpg)`;
       div.style.backgroundSize = 'contain';
+      div.textContent ='';
+      
   });
     div.textContent = i;
-    // let targetIndex = Math.floor(Math.random() * targetNumber.length) ;     
+    // let targetIndex = Math.floor(Math.random() * targetNumber.length) ; 
     // div.textContent = targetNumber[targetIndex];
     // targetNumber.splice(targetIndex, 1);
   }
@@ -68,7 +70,7 @@ const suggestObj = {
   3:`パーソナルカラー診断をする`,
   4:`全員と2ショットをとる。or 皆でスクショを撮る`,
   5:`経験したことのあるスポーツについて共有する`,
-  6:`二人組になってみんなにペアの人の紹介をする（他己紹介）`,
+  6:`二人組になってみんなにペアの人を紹介する（他己紹介）`,
   7:`カメラロールで最新の画像を見せる`,
   8:`16Personalities(性格診断）をみんなでやる`,
   9:`自分の好きなご飯やさんの情報を共有する`,
@@ -86,10 +88,17 @@ const suggestObj = {
   21:`その場にいる人と絵しりとり`,
   22:`相手の似顔絵を書く`,
   23:`ラインとインスタを交換する`,
-  24:`コンビニで小学生のときに一番食べていたお菓子を買うまたは紹介`,
+  24:`コンビニで小学生のときに一番食べていたお菓子を買うor紹介`,
 }
 
 let timerId;
+
+// お題表示
+const bingo = document.querySelector('.card');
+bingo.insertAdjacentHTML('beforeend', `<div class="suggest"></div>`);
+const suggest = document.querySelector('.suggest');
+suggest.style.display = 'none';
+
 
 button.onclick = () => {
 
@@ -113,9 +122,8 @@ button.onclick = () => {
     historyArray.push(main.textContent);
     history.textContent = historyArray;
 
-      // お題表示
-  const bingo = document.querySelector('.card');
-  bingo.insertAdjacentHTML('beforeend', `<div class="suggest">${suggestObj[targetIndex]}</div>`);
+  suggest.style.display = '';
+  suggest.innerHTML = `${suggestObj[targetIndex]}`;
   }
 
 }
