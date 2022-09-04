@@ -39,12 +39,7 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
     function (){
       div.style.backgroundImage = `url(./img/bingoBack${i}.jpg)`;
       div.style.backgroundSize = 'contain';
-      div.textContent =""
-      divSquare1.classList.add('ss')
-      divSquare2.classList.add('ss')
-      divSquare3.classList.add('ss')
-      divSquare4.classList.add('ss')
-      divSquare5.classList.add('ss')
+      div.textContent =''
   });
     div.textContent = i;
     // let targetIndex = Math.floor(Math.random() * targetNumber.length) ; 
@@ -60,12 +55,46 @@ let main = document.getElementById('main');
 let button = document.querySelector('#button');
 let history = document.getElementById('history');
 let historyArray = [];
-let tarrgetNumber = [];
-for(let i = 1; i <= MAX_NUMBER; i++){
-  targetNumber.push(i);
+// let tarrgetNumber = [];
+// for(let i = 1; i <= MAX_NUMBER; i++){
+//   targetNumber.push(i);
+// }
+
+// お題のオブジェクト
+const suggestObj = {
+  1:`全員の共通点を3つみつけよう！`,
+  2:`MBTI診断をみんなでやってみる`,
+  3:`パーソナルカラー診断をする`,
+  4:`全員と2ショットをとる。or 皆でスクショを撮る`,
+  5:`経験したことのあるスポーツについて共有する`,
+  6:`二人組になってみんなにペアの人の紹介をする（他己紹介）`,
+  7:`カメラロールで最新の画像を見せる`,
+  8:`16Personalities(性格診断）をみんなでやる`,
+  9:`自分の好きなご飯やさんの情報を共有する`,
+  10:`読んでよかった本を紹介する`,
+  11:`好きな土地の紹介`,
+  12:`地元の紹介をする`,
+  13:`自分史を4分間なるべく詳しく説明してみる`,
+  14:`背中の後ろで手を繋げる？チャレンジ！！`,
+  15:`誰にでもなれるとしたら誰になりたい？`,
+  16:`将来のことについて15分間話す。or 目標を宣言する`,
+  17:`遊びの計画を立てる`,
+  18:`自分しか知らなそうな豆知識を披露する！`,
+  19:`苦手なところを一つ克服できるとしたら何？`,
+  20:`共通の友人探し！相手と意外な共通の知人がいるかも...`,
+  21:`その場にいる人と絵しりとり`,
+  22:`相手の似顔絵を書く`,
+  23:`ラインとインスタを交換する`,
+  24:`コンビニで小学生のときに一番食べていたお菓子を買うまたは紹介`,
 }
 
 let timerId;
+
+// お題表示
+const bingo = document.querySelector('.card');
+bingo.insertAdjacentHTML('beforeend', `<div class="suggest"></div>`);
+const suggest = document.querySelector('.suggest');
+suggest.style.display = 'none';
 
 
 button.onclick = () => {
@@ -89,8 +118,11 @@ button.onclick = () => {
     targetNumber.splice(targetIndex, 1);
     historyArray.push(main.textContent);
     history.textContent = historyArray;
+
+  suggest.style.display = '';
+  suggest.innerHTML = `${suggestObj[targetIndex]}`;
   }
-  
+
 }
 
 // const divSquare1 = document.querySelector('square1');
