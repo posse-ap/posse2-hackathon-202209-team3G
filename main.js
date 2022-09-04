@@ -34,13 +34,15 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
     // div.textContent = 'free';
     div.style.backgroundImage = `url(./img/bingoBack13.jpg)`;
     div.style.backgroundSize = 'contain';
+    
   }else{
     divSquare.addEventListener('click', 
     function (){
+      div.classList.add('magic');
       div.style.backgroundImage = `url(./img/bingoBack${i}.jpg)`;
       div.style.backgroundSize = 'contain';
       div.textContent ='';
-      div.classList.add('magic');
+      
   });
     div.textContent = i;
     // let targetIndex = Math.floor(Math.random() * targetNumber.length) ; 
