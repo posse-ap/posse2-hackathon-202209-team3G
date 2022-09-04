@@ -41,7 +41,7 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
       divSquare.classList.toggle('gray');
       div.style.backgroundImage = `url(./img/bingoBack${i}.jpg)`;
       div.style.backgroundSize = 'contain';
-      div.textContent =''
+      div.textContent ='';
   });
     div.textContent = i;
     // let targetIndex = Math.floor(Math.random() * targetNumber.length) ;     
@@ -69,7 +69,7 @@ const suggestObj = {
   3:`パーソナルカラー診断をする`,
   4:`全員と2ショットをとる。or 皆でスクショを撮る`,
   5:`経験したことのあるスポーツについて共有する`,
-  6:`二人組になってみんなにペアの人の紹介をする（他己紹介）`,
+  6:`二人組になってみんなにペアの人を紹介する（他己紹介）`,
   7:`カメラロールで最新の画像を見せる`,
   8:`16Personalities(性格診断）をみんなでやる`,
   9:`自分の好きなご飯やさんの情報を共有する`,
@@ -87,7 +87,7 @@ const suggestObj = {
   21:`その場にいる人と絵しりとり`,
   22:`相手の似顔絵を書く`,
   23:`ラインとインスタを交換する`,
-  24:`コンビニで小学生のときに一番食べていたお菓子を買うまたは紹介`,
+  24:`コンビニで小学生のときに一番食べていたお菓子を買うor紹介`,
 }
 
 let timerId;
