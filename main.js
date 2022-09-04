@@ -48,9 +48,9 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
   outer.appendChild(divSquare);
 }
 
-let MAXNUMBER = 24;
+let MAXNUMBER = 24
 let main = document.getElementById('main');
-let button = document.getElementById('button');
+let button = document.querySelector('#button');
 let history = document.getElementById('history');
 let historyArray = [];
 let tarrgetNumber = [];
