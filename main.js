@@ -11,9 +11,6 @@ document.getElementById('hamburger').addEventListener('click' , function () {
 } );
 //ハンバーガーメニューおわり
 
-//たいとるアニメーション
-
-//たいとるアニメーションおわり
 
 //ビンゴ
 const COLUMN_LENGTH = 5;//縦の長さ
@@ -23,6 +20,8 @@ let targetNumber = [];
 for(let i = 1; i <= MAX_NUMBER; i++){
   targetNumber.push(i);
 }
+
+
 
 const outer = document.getElementById('outer');
 
@@ -37,13 +36,18 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
     div.style.backgroundSize = 'contain';
   }else{
     divSquare.addEventListener('click', 
-    function(){
-      divSquare.classList.toggle('gray');
+    function (){
       div.style.backgroundImage = `url(./img/bingoBack${i}.jpg)`;
       div.style.backgroundSize = 'contain';
+      div.textContent =""
+      divSquare1.classList.add('ss')
+      divSquare2.classList.add('ss')
+      divSquare3.classList.add('ss')
+      divSquare4.classList.add('ss')
+      divSquare5.classList.add('ss')
   });
     div.textContent = i;
-    // let targetIndex = Math.floor(Math.random() * targetNumber.length) ;     
+    // let targetIndex = Math.floor(Math.random() * targetNumber.length) ; 
     // div.textContent = targetNumber[targetIndex];
     // targetNumber.splice(targetIndex, 1);
   }
