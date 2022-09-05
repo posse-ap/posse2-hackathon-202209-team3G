@@ -13,7 +13,11 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
   divSquare.classList.add(`square`,`square${i}`);
   let div = document.createElement('div');
   div.classList.add('val');
-  div.textContent = i;
+  if(i <= 12){
+    div.textContent = i;
+  } else{
+    div.textContent = i - 1;
+  }
   divSquare.appendChild(div);
   outer.appendChild(divSquare);
   let congratulations;
