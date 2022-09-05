@@ -47,7 +47,6 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
         div.style.backgroundSize = 'contain';
         div.textContent ='';
         congratulations = [...document.querySelectorAll('.val')];
-        console.log(divSquare);
             divSquare.classList.add('magic');
             if(divSquare1.classList.contains('magic') && divSquare2.classList.contains('magic') && divSquare3.classList.contains('magic') && divSquare4.classList.contains('magic') && divSquare5.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
@@ -170,10 +169,6 @@ let main = document.getElementById('main');
 let button = document.querySelector('#button');
 let history = document.getElementById('history');
 let historyArray = [];
-// let tarrgetNumber = [];
-// for(let i = 1; i <= MAX_NUMBER; i++){
-//   targetNumber.push(i);
-// }
 
 // お題のオブジェクト
 const suggestObj = {
@@ -202,7 +197,6 @@ const suggestObj = {
   23:`ラインとインスタを交換する`,
   24:`コンビニで小学生のときに一番食べていたお菓子を買うor紹介`,
 }
-
 let timerId;
 
 // お題表示
@@ -235,7 +229,8 @@ button.onclick = () => {
     history.textContent = historyArray;
 
   suggest.style.display = '';
-  suggest.innerHTML = `${suggestObj[targetIndex]}`;
+  suggest.innerHTML = `${suggestObj[targetIndex + 1]}`;
+  console.log(targetNumber);
   }
 
 }
