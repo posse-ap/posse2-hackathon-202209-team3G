@@ -225,15 +225,6 @@
 
 /* アニメーション */
 
-/* .text__bound {
-    animation: key .3s ease infinite alternate;
-    font-size: 80px;
-  }
-  @keyframes key {
-    0% {transform: translateY(0px);}
-    100% {transform: translateY(-15px);}
-  } */
-
   p {
     padding: 10px;
   }
@@ -311,9 +302,7 @@
         width:100px;
         height:auto;
     }
-    /* .text__bound{
-        font-size:45px;
-    } */
+
     .wave{
         font-size:45px;
     }
@@ -368,10 +357,6 @@
   .outer{
     display:flex;
     flex-wrap: wrap;
-    /* background:linear-gradient(45deg, #3bade3,#9844b7,#44ea76);/*グラデーションを定義*/
-    /* / */
-    /* width:background-size: 200% 200%; */
-    /* animation: bggradient 20s ease infinite; *70%; */
     margin:auto;
     background-color: #3bade3;
   }
