@@ -217,22 +217,20 @@ button.onclick = () => {
   if(button.textContent === 'スタート'){
     button.textContent = 'ストップ';
     timerId = setInterval( () => {
-      let targetIndex = Math.floor(Math.random() * targetNumber.length) ;  
-      main.textContent = targetNumber[targetIndex];
+    let targetIndex = Math.floor(Math.random() * targetNumber.length);
+    main.textContent = targetNumber[targetIndex];
     }, 100)
   }else{
     button.textContent = 'スタート';
     clearInterval(timerId); 
-    let targetIndex = targetNumber.indexOf(Number(main.textContent));   
+    let targetIndex = targetNumber.indexOf(Number(main.textContent));
     targetNumber.splice(targetIndex, 1);
     historyArray.push(main.textContent);
     history.textContent = historyArray;
 
   suggest.style.display = '';
-  suggest.innerHTML = `${suggestObj[targetIndex + 1]}`;
-  console.log(targetNumber);
+  suggest.innerHTML = `${suggestObj[Number(main.textContent)]}`;
   }
-
 }
 
 const divSquare1 = document.querySelector('.square1');
