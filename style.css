@@ -223,6 +223,65 @@
 }
 /* ↑ここまでハンバーガーメニュー */
 
+/* アニメーション */
+
+/* .text__bound {
+    animation: key .3s ease infinite alternate;
+    font-size: 80px;
+  }
+  @keyframes key {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(-15px);}
+  } */
+
+  p {
+    padding: 10px;
+  }
+  
+  .wave {
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .wave span {
+    position: relative;
+    animation: wave-anim 2s linear infinite;
+  }
+  
+  /* animation */
+  @keyframes wave-anim {
+    0% {
+      top: 0;
+    }
+    30% {
+      top: 11px;
+    }
+    70% {
+      top: -11px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  
+  /* animation-delay */
+  .wave span:nth-child(5n + 1) {
+    animation-delay: 0.5s;
+  }
+  
+  .wave span:nth-child(5n + 2) {
+    animation-delay: 1s;
+  }
+  
+  .wave span:nth-child(5n + 3) {
+    animation-delay: 1.5s;
+  }
+  
+  .wave span:nth-child(5n + 4) {
+    animation-delay: 2s;
+  }
+
 .header_list{
     display: flex;
     list-style: none;
@@ -231,8 +290,8 @@
 
 .cardTitle{
     text-align: center;
-    padding-bottom: 160px;
-    padding-top: 160px;
+    padding-bottom: 100px;
+    padding-top: 100px;
 }
 
 .title{
@@ -251,6 +310,12 @@
     .posseimg{
         width:100px;
         height:auto;
+    }
+    /* .text__bound{
+        font-size:45px;
+    } */
+    .wave{
+        font-size:45px;
     }
 }
 
