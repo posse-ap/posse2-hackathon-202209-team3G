@@ -155,6 +155,7 @@ body{
 }
 .p{
   text-align: center;
+  font-size:30px
 }
 .ruleWrapper{
   display:flex;
@@ -173,4 +174,21 @@ body{
 }
 .i{
   text-align: center;
+  margin-top: 30px;
+  background-color: ffffff;
+}
+.Bingohen{
+  font-size: 25px;
+}
+.Slackhen{
+  font-size: 25px;
+}
+.b{
+width: 500px;
+}
+.bingoWrapper{
+  width: 500px;
+}
+.ruleWrapper{
+  
 }
