@@ -1,5 +1,9 @@
 
-
+.wrapper{
+  padding-top: 100px;
+  font-size:18px;
+  font-weight:bold;
+}
 .header {
   display: flex;
   align-items: center;
@@ -227,11 +231,15 @@ margin:0 5px;
   font-weight: bold;
   font-size:30px;
 }
-.p{
+.q{
   text-align: center;
+  width: 80%;
+  padding:0 60px;
+  margin:0 auto;
+  padding-bottom: 100px;
 }
-.ruleWrapper{
-  display:flex;
+.ruleContainer{
+  text-align: center;
 }
 .s{
   width:100%;
@@ -239,6 +247,8 @@ margin:0 5px;
 }
 .bingoWrapper{
   display:flex;
+  text-align: center;
+  margin: auto;
 }
 .bingoImg{
   width:160px;
@@ -251,4 +261,54 @@ margin:0 5px;
 body{
   padding:0,50px;
   background-color:#eacbcb;
+}
+
+ul li{
+  text-align: left;
+}
+
+.bingoWrapper{
+  background-color:whitesmoke;
+  border-radius:30px;
+  width:60%;
+}
+.b::before{
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid black;
+  
+}
+
+.ruleText{
+  align-self: center;
+}
+.s{
+  border-radius:30px 0 0 30px;
+  height:100%;
+}
+.bingoImg{
+  height:100%;
+}
+.topp{
+  width: 250px;
+  height: 60px;
+position: fixed;
+right: 0;
+bottom: 0;
+margin-bottom: 5px;
+background: #5CB85C;
+opacity: 0.6;
+border-radius: 30px;
+font-weight: bold;
+color:black;
+}
+.topp a{
+  padding-top:30px;
+  text-decoration: none;
+  line-height: 5px;
+  position: absolute;
+  padding-left: 46px;
 }

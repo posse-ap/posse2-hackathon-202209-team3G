@@ -373,7 +373,7 @@
     /* width:background-size: 200% 200%; */
     /* animation: bggradient 20s ease infinite; *70%; */
     margin:auto;
-    background-color:#3bade3;
+    background-color: #3bade3;
   }
   @keyframes bggradient{
     0% {
@@ -489,3 +489,35 @@ h2{
     }
 }
 
+.topp{
+    width: 250px;
+    height: 60px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 5px;
+  background: #5CB85C;
+  opacity: 0.6;
+  border-radius: 30px;
+  font-weight: bold;
+  color:black;
+}
+.topp a{
+    padding-top:30px;
+    text-decoration: none;
+    line-height: 5px;
+    position: absolute;
+    padding-left: 46px;
+}
+@media screen and (max-width:400px){
+    .topp{
+        width:140px;
+    }
+    .topp a{
+        font-size: 10px;
+        font-weight: bold;
+        color:black;
+        line-height:0;
+        padding-left: 22px;
+    }
+}
