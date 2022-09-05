@@ -1,6 +1,6 @@
 
 .wrapper{
-  padding-top: 100px;
+  padding-top: 10px;
   font-size:18px;
   font-weight:bold;
 }
@@ -98,7 +98,7 @@ margin:0 5px;
 .bingoDiscription-title{
   text-align: center;
 }
-.title{
+.title,.title2{
   color: #505050;/*文字色*/
   padding: 0.5em;/*文字周りの余白*/
   display: inline-block;/*おまじない*/
@@ -111,7 +111,11 @@ margin:0 5px;
   font-size:30px;
   font-weight:bold;
 }
-.title:before ,.ruleTitle:before{
+.title2{
+  margin-top:30px;
+  margin-bottom:0;
+}
+.title:before ,.title2:before,.ruleTitle:before{
   content: '●';
   color: white;
   margin-right: 8px;
@@ -222,7 +226,7 @@ right: 0;
 bottom: 0;
 margin-bottom: 5px;
 background: #5CB85C;
-opacity: 0.6;
+opacity: 0.9;
 border-radius: 30px;
 font-weight: bold;
 color:black;
@@ -232,5 +236,5 @@ color:black;
   text-decoration: none;
   line-height: 5px;
   position: absolute;
-  padding-left: 46px;
+  padding-left: 67px;
 }
