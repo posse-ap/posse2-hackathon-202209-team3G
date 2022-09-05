@@ -24,7 +24,6 @@ for(let i = 1; i <= MAX_NUMBER; i++){
 }
 
 const outer = document.getElementById('outer');
-let aryIndex;
 for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
   let divSquare = document.createElement('div');
   divSquare.classList.add(`square`,`square${i}`);
@@ -47,7 +46,8 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
         div.style.backgroundSize = 'contain';
         div.textContent ='';
         congratulations = [...document.querySelectorAll('.val')];
-            divSquare.classList.add('magic');
+        divSquare.classList.add('magic');
+          const animationTimeout = function(){
             if(divSquare1.classList.contains('magic') && divSquare2.classList.contains('magic') && divSquare3.classList.contains('magic') && divSquare4.classList.contains('magic') && divSquare5.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
@@ -156,10 +156,11 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
               }
             )
             }
+          }
+          setTimeout(animationTimeout,3000);
       }
       )
     }
-
   }
 
 
