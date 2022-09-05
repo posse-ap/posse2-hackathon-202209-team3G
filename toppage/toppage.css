@@ -18,108 +18,6 @@
   z-index: 1000;
 }
 
-/* ↓ここからハンバーガーメニュー */
-#nav{
-  position: absolute;
-  top: 0;
-  /*ナビメニューを左に隠した状態になる*/
-  left: -40%;
-  width: 40%;
-  height: 100vh;
-  background: #666;
-  /*０.7秒かけてナビメニューがスライドする*/
-  transition: .7s;
-}
-#nav ul{
-  padding-top: 80px;
-}
-#nav ul li{
-  list-style-type: none;
-  font-size: 20px;
-}
-#nav a{
-  display: block;
-  text-decoration: none;
-  color: #000000;
-  margin: 0 15px;
-  padding: 10px;
-  transition: .5s;
-}
-#nav li a:hover{
-  color: #666;
-  background: #cd5c5c;
-  border-bottom: none;
-}
-#hamburger {
-  display: block;
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  width: 50px;
-  height: 44px;
-  cursor: pointer;
-  transition: 1s;
-}
-.inner_line {
-  display: block;
-  position: absolute;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background-color: #666;
-  transition: 1s;
-  border-radius: 4px;
-}
-#line1 {
-  top: 0;
-}
-#line2 {
-  top: 20px;
-}
-#line3 {
-  bottom: 0px;
-}
-.in{
-  transform: translateX(100%);
-}
-.line_1,.line_2,.line_3{
-  background: #000000;
-}
-.line_1 {
-  /*-45度回転させる*/
-  transform: rotate(-45deg);
-  top: 0;
-}
-.line_2 {
-  opacity: 0;
-}
-.line_3 {
-  /*45度回転させる*/
-  transform: rotate(45deg);
-  bottom: 0;}
-
-.keyVisual{
-  text-align: center;
-  padding-top:90px;
-  position: relative;
-}
-.keyImage{
-  width:70%;
-  height:70%;
-  text-align: center;
-}
-.keyVisualtext{
-  font-size:40px;
-  top: 320px;
-  left:440px;
-  position:absolute;
-  color:blue;
-  font-weight: bold;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
   width:94%;
   margin:0 auto;
@@ -200,17 +98,17 @@ margin:0 5px;
 .bingoDiscription-title{
   text-align: center;
 }
-.title ,.ruleTitle{
+.title{
   color: #505050;/*文字色*/
   padding: 0.5em;/*文字周りの余白*/
   display: inline-block;/*おまじない*/
   line-height: 1.3;/*行高*/
-  background: #dbebf8;/*背景色*/
+  background: #81bef7;/*背景色*/
   vertical-align: middle;
   border-radius: 25px 0px 0px 25px;/*左側の角を丸く*/
-  margin-top:30px;
+  /* margin-top:30px; */
   margin-bottom:30px;
-  font-size:50px;
+  font-size:30px;
   font-weight:bold;
 }
 .title:before ,.ruleTitle:before{
@@ -218,8 +116,18 @@ margin:0 5px;
   color: white;
   margin-right: 8px;
 }
+.bingoDiscription, .ruleContainer{
+  background-color: #fff;
+  border-radius: 80px;
+  width: 70%;
+  margin: 5% auto;
+  padding: 30px ;
+  text-align: center;
+}
+
+
 .bingoDiscription-title p{
-  font-size:15px;
+  font-size:20px;
   text-align: left;
   padding-left: 100px;
   padding-right:100px;
@@ -231,15 +139,24 @@ margin:0 5px;
   font-weight: bold;
   font-size:30px;
 }
-.q{
-  text-align: center;
-  width: 80%;
-  padding:0 60px;
-  margin:0 auto;
-  padding-bottom: 100px;
+.q, .b{
+  padding: 20px;
+  margin: 3% 10%;
 }
-.ruleContainer{
-  text-align: center;
+.q{
+  margin: -5% 10% ;
+}
+
+
+
+  
+.ruleDescriptionContainer{
+  background-color: #fff;
+  width: 80%;
+  border-radius: 20%;
+  margin: 60px auto;
+  padding: 50;
+  border: 1px solid #0080ff;
 }
 .s{
   width:100%;
@@ -255,35 +172,40 @@ margin:0 5px;
   height:170px;
   padding-right: 20px;
 }
-.i{
+.i h3{
+  display: inline-block;
   text-align: center;
+  font-weight: 600;
+  font-size: 1.5em;
+  border-bottom:  solid 4px #0080ff;
+  /* color:#0080ff; */
+}
+.i{
+  margin: 10px;
 }
 body{
   padding:0,50px;
-  background-color:#eacbcb;
+  background-color:#e0f8f7;
 }
 
 ul li{
   text-align: left;
 }
 
-.bingoWrapper{
-  background-color:whitesmoke;
-  border-radius:30px;
-  width:60%;
-}
-.b::before{
+
+.q::before{
   content: "";
   width: 0;
   height: 0;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
   border-top: 30px solid black;
-  
 }
 
 .ruleText{
   align-self: center;
+  font-size: 20px;
+
 }
 .s{
   border-radius:30px 0 0 30px;

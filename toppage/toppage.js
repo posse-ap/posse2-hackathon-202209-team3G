@@ -1,14 +1,3 @@
-function hamburger() {
-  document.getElementById('line1').classList.toggle('line_1');
-  document.getElementById('line2').classList.toggle('line_2');
-  document.getElementById('line3').classList.toggle('line_3');
-  document.getElementById('nav').classList.toggle('in');
-}
-document.getElementById('hamburger').addEventListener('click' , function(){
-  hamburger();
-} );
-
-
 $('.slider').slick({
   autoplay: true,//自動的に動き出すか。初期値はfalse。
   infinite: true,//スライドをループさせるかどうか。初期値はtrue。
