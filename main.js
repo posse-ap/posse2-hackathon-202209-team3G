@@ -12,6 +12,8 @@ document.getElementById('hamburger').addEventListener('click' , function(){
 //ハンバーガーメニューおわり
 
 
+
+
 //ビンゴ
 const COLUMN_LENGTH = 5;//縦の長さ
 const ROW_LENGTH = 5;

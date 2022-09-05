@@ -223,6 +223,65 @@
 }
 /* ↑ここまでハンバーガーメニュー */
 
+/* アニメーション */
+
+/* .text__bound {
+    animation: key .3s ease infinite alternate;
+    font-size: 80px;
+  }
+  @keyframes key {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(-15px);}
+  } */
+
+  p {
+    padding: 10px;
+  }
+  
+  .wave {
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .wave span {
+    position: relative;
+    animation: wave-anim 2s linear infinite;
+  }
+  
+  /* animation */
+  @keyframes wave-anim {
+    0% {
+      top: 0;
+    }
+    30% {
+      top: 11px;
+    }
+    70% {
+      top: -11px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  
+  /* animation-delay */
+  .wave span:nth-child(5n + 1) {
+    animation-delay: 0.5s;
+  }
+  
+  .wave span:nth-child(5n + 2) {
+    animation-delay: 1s;
+  }
+  
+  .wave span:nth-child(5n + 3) {
+    animation-delay: 1.5s;
+  }
+  
+  .wave span:nth-child(5n + 4) {
+    animation-delay: 2s;
+  }
+
 .header_list{
     display: flex;
     list-style: none;
@@ -231,8 +290,8 @@
 
 .cardTitle{
     text-align: center;
-    padding-bottom: 160px;
-    padding-top: 160px;
+    padding-bottom: 100px;
+    padding-top: 100px;
 }
 
 .title{
@@ -251,6 +310,12 @@
     .posseimg{
         width:100px;
         height:auto;
+    }
+    /* .text__bound{
+        font-size:45px;
+    } */
+    .wave{
+        font-size:45px;
     }
 }
 
@@ -274,11 +339,31 @@
     justify-content: center;
     width: 100%;
     height: 50px;
-    background-color: #fff;
+    /* background-color: #fff; */
     font-size: large;
     font-weight: bold;
     margin-top: 50px;
+
+    position: relative;
+    background: #fff0cd;
+    box-shadow: 0px 0px 0px 5px #fff0cd;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
 }
+
+
+.suggest:after{
+    position: absolute;
+    content: '';
+    right: -7px;
+    top: -7px;
+    border-width: 0 15px 15px 0;
+    border-style: solid;
+    border-color: #ffdb88 #fff #ffdb88;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
 
   .outer{
     display:flex;
@@ -288,7 +373,12 @@
     /* width:background-size: 200% 200%; */
     /* animation: bggradient 20s ease infinite; *70%; */
     margin:auto;
-    background-color:#3bade3;
+
+    /* background-color:#3bade3; */
+
+    /* background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8)) fixed, url(http://www.webcreatorbox.com/sample/images/bg-cherrybrossam.jpg) fixed;
+  background-size: cover; */
+  background: radial-gradient( rgba(36, 5, 137, 0.8), rgba(0, 217, 255, 0.8)) 
   }
   @keyframes bggradient{
     0% {
@@ -354,13 +444,27 @@ transform:rotateY(-360deg);
         outline: none;
         padding: 0;
         appearance: none;
-        width:200px;
-        height:200px;
+        width:215px;
+        height:215px;
     background-color: #3bade3;
     border-radius:50%;
     font-size:30px;
     font-weight: bold;
+    display: inline-block;
+  padding: 2px 25px;
+  text-decoration: none;
+  color: #FFF;
+  border-bottom: sol2id 8px #627295;
+  border-right: solid 8px #627295;
+  border-radius: 50%;
 }
+
+#button:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    border-bottom: none;
+    border-right: none;
+  }
 
 #history{
     font-size:20px;
@@ -383,9 +487,10 @@ h2{
         padding-bottom: 50px;
     }
     #button{
-        width:120px;
-        height:120px;
-        font-size:20px;
+        width:130px;
+        height:130px;
+        font-size:16px;
+        font-weight: bold;
     }
 }
 
