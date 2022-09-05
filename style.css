@@ -373,7 +373,12 @@
     /* width:background-size: 200% 200%; */
     /* animation: bggradient 20s ease infinite; *70%; */
     margin:auto;
-    background-color:#3bade3;
+
+    /* background-color:#3bade3; */
+
+    /* background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8)) fixed, url(http://www.webcreatorbox.com/sample/images/bg-cherrybrossam.jpg) fixed;
+  background-size: cover; */
+  background: radial-gradient( rgba(36, 5, 137, 0.8), rgba(0, 217, 255, 0.8)) 
   }
   @keyframes bggradient{
     0% {
