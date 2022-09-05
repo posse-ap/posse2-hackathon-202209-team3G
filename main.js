@@ -23,75 +23,161 @@ for(let i = 1; i <= MAX_NUMBER; i++){
   targetNumber.push(i);
 }
 
-
-
 const outer = document.getElementById('outer');
-
+let aryIndex;
 for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
-  const divSquare = document.createElement('div');
+  let divSquare = document.createElement('div');
   divSquare.classList.add(`square`,`square${i}`);
   let div = document.createElement('div');
-  if(i === Math.round(COLUMN_LENGTH * ROW_LENGTH /2)){
-    // divSquare.classList.add('gray');
-    // div.textContent = 'free';
-    div.style.backgroundImage = `url(./img/bingoBack13.jpg)`;
-    div.style.backgroundSize = 'contain';
-    
-  }else{
-    divSquare.addEventListener('click', 
-    function (){
-      divSquare.classList.add('magic');
-      div.classList.add('bingoAnimation');
-      div.style.backgroundImage = `url(./img/bingoBack${i}.jpg)`;
-      div.style.backgroundSize = 'contain';
-      div.textContent ='';
-      if(divSquare1.classList.contains('magic') && divSquare2.classList.contains('magic') && divSquare3.classList.contains('magic') && divSquare4.classList.contains('magic') && divSquare5.classList.contains('magic')){
-        console.log('成功');
-      }
-      if(divSquare6.classList.contains('magic') && divSquare7.classList.contains('magic') && divSquare8.classList.contains('magic') && divSquare9.classList.contains('magic') && divSquare10.classList.contains('magic')){
-        console.log('成功');
-      }
-      if(divSquare11.classList.contains('magic') && divSquare12.classList.contains('magic') && divSquare14.classList.contains('magic') && divSquare15.classList.contains('magic')){
-        console.log('成功');
-      }
-      if(divSquare16.classList.contains('magic') && divSquare17.classList.contains('magic') && divSquare18.classList.contains('magic') && divSquare19.classList.contains('magic') && divSquare20.classList.contains('magic')){
-        console.log('成功');
-      }
-      if(divSquare21.classList.contains('magic') && divSquare22.classList.contains('magic') && divSquare23.classList.contains('magic') && divSquare24.classList.contains('magic') && divSquare25.classList.contains('magic')){
-        console.log('成功');
-      }
-      if(divSquare1.classList.contains('magic') && divSquare6.classList.contains('magic') && divSquare11.classList.contains('magic') && divSquare16.classList.contains('magic') && divSquare21.classList.contains('magic')){
-        console.log('成功');
-      }
-      if(divSquare2.classList.contains('magic') && divSquare7.classList.contains('magic') && divSquare12.classList.contains('magic') && divSquare17.classList.contains('magic') && divSquare22.classList.contains('magic')){
-        console.log('成功');
-      }
-      if(divSquare3.classList.contains('magic') && divSquare8.classList.contains('magic') && divSquare18.classList.contains('magic') && divSquare23.classList.contains('magic')){
-        console.log('成功');
-      }
-      if(divSquare4.classList.contains('magic') && divSquare9.classList.contains('magic') && divSquare14.classList.contains('magic') && divSquare19.classList.contains('magic') && divSquare24.classList.contains('magic')){
-        console.log('成功');
-      }
-      if(divSquare5.classList.contains('magic') && divSquare10.classList.contains('magic') && divSquare15.classList.contains('magic') && divSquare20.classList.contains('magic') && divSquare25.classList.contains('magic')){
-        console.log('成功');
-      }
-      if(divSquare1.classList.contains('magic') && divSquare7.classList.contains('magic') && divSquare19.classList.contains('magic') && divSquare25.classList.contains('magic')){
-        console.log('成功');
-      }
-      if(divSquare5.classList.contains('magic') && divSquare9.classList.contains('magic') && divSquare17.classList.contains('magic') && divSquare21.classList.contains('magic')){
-        console.log('成功');
-      }
-  });
-    div.textContent = i;
-    // let targetIndex = Math.floor(Math.random() * targetNumber.length) ; 
-    // div.textContent = targetNumber[targetIndex];
-    // targetNumber.splice(targetIndex, 1);
-  }
+  div.classList.add('val');
+  div.textContent = i;
   divSquare.appendChild(div);
   outer.appendChild(divSquare);
-}
+  let congratulations;
+    if(i === Math.round(COLUMN_LENGTH * ROW_LENGTH /2)){
+      div.style.backgroundImage = `url(./img/bingoBack13.jpg)`;
+      div.style.backgroundSize = 'contain';
+      div.textContent ='';
+    }else{
+      divSquare.addEventListener('click',
+      function(){
+        divSquare.classList.add('magic');
+        div.classList.add('bingoAnimation');
+        div.style.backgroundImage = `url(./img/bingoBack${i}.jpg)`;
+        div.style.backgroundSize = 'contain';
+        div.textContent ='';
+        congratulations = [...document.querySelectorAll('.val')];
+        console.log(divSquare);
+            divSquare.classList.add('magic');
+            if(divSquare1.classList.contains('magic') && divSquare2.classList.contains('magic') && divSquare3.classList.contains('magic') && divSquare4.classList.contains('magic') && divSquare5.classList.contains('magic')){
+              congratulations.forEach((element,conIndex)=>{                
+                console.log(element);
+                    element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
+                    element.style.backgroundSize = 'contain';
+                    element.textContent ='';
+                    element.classList.add('bingoAnimation');
+              }
+            )
+            }
+            if(divSquare6.classList.contains('magic') && divSquare7.classList.contains('magic') && divSquare8.classList.contains('magic') && divSquare9.classList.contains('magic') && divSquare10.classList.contains('magic')){
+              congratulations.forEach((element,conIndex)=>{                
+                console.log(element);
+                    element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
+                    element.style.backgroundSize = 'contain';
+                    element.textContent ='';
+                    element.classList.add('bingoAnimation');
+              }
+            )
+            }
+            if(divSquare11.classList.contains('magic') && divSquare12.classList.contains('magic') && divSquare14.classList.contains('magic') && divSquare15.classList.contains('magic')){
+              congratulations.forEach((element,conIndex)=>{                
+                console.log(element);
+                    element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
+                    element.style.backgroundSize = 'contain';
+                    element.textContent ='';
+                    element.classList.add('bingoAnimation');
+              }
+            )
+            }
+            if(divSquare16.classList.contains('magic') && divSquare17.classList.contains('magic') && divSquare18.classList.contains('magic') && divSquare19.classList.contains('magic') && divSquare20.classList.contains('magic')){
+              congratulations.forEach((element,conIndex)=>{                
+                console.log(element);
+                    element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
+                    element.style.backgroundSize = 'contain';
+                    element.textContent ='';
+                    element.classList.add('bingoAnimation');
+              }
+            )
+            }
+            if(divSquare21.classList.contains('magic') && divSquare22.classList.contains('magic') && divSquare23.classList.contains('magic') && divSquare24.classList.contains('magic') && divSquare25.classList.contains('magic')){
+              congratulations.forEach((element,conIndex)=>{                
+                console.log(element);
+                    element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
+                    element.style.backgroundSize = 'contain';
+                    element.textContent ='';
+                    element.classList.add('bingoAnimation');
+              }
+            )
+            }
+            if(divSquare1.classList.contains('magic') && divSquare6.classList.contains('magic') && divSquare11.classList.contains('magic') && divSquare16.classList.contains('magic') && divSquare21.classList.contains('magic')){
+              congratulations.forEach((element,conIndex)=>{                
+                console.log(element);
+                    element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
+                    element.style.backgroundSize = 'contain';
+                    element.textContent ='';
+                    element.classList.add('bingoAnimation');
+              }
+            )
+            }
+            if(divSquare2.classList.contains('magic') && divSquare7.classList.contains('magic') && divSquare12.classList.contains('magic') && divSquare17.classList.contains('magic') && divSquare22.classList.contains('magic')){
+              congratulations.forEach((element,conIndex)=>{                
+                console.log(element);
+                    element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
+                    element.style.backgroundSize = 'contain';
+                    element.textContent ='';
+                    element.classList.add('bingoAnimation');
+              }
+            )
+            }
+            if(divSquare3.classList.contains('magic') && divSquare8.classList.contains('magic') && divSquare18.classList.contains('magic') && divSquare23.classList.contains('magic')){
+              congratulations.forEach((element,conIndex)=>{                
+                console.log(element);
+                    element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
+                    element.style.backgroundSize = 'contain';
+                    element.textContent ='';
+                    element.classList.add('bingoAnimation');
+              }
+            )
+            }
+            if(divSquare4.classList.contains('magic') && divSquare9.classList.contains('magic') && divSquare14.classList.contains('magic') && divSquare19.classList.contains('magic') && divSquare24.classList.contains('magic')){
+              congratulations.forEach((element,conIndex)=>{                
+                console.log(element);
+                    element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
+                    element.style.backgroundSize = 'contain';
+                    element.textContent ='';
+                    element.classList.add('bingoAnimation');
+              }
+            )
+            }
+            if(divSquare5.classList.contains('magic') && divSquare10.classList.contains('magic') && divSquare15.classList.contains('magic') && divSquare20.classList.contains('magic') && divSquare25.classList.contains('magic')){
+              congratulations.forEach((element,conIndex)=>{                
+                console.log(element);
+                    element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
+                    element.style.backgroundSize = 'contain';
+                    element.textContent ='';
+                    element.classList.add('bingoAnimation');
+              }
+            )
+            }
+            if(divSquare1.classList.contains('magic') && divSquare7.classList.contains('magic') && divSquare19.classList.contains('magic') && divSquare25.classList.contains('magic')){
+              congratulations.forEach((element,conIndex)=>{                
+                console.log(element);
+                    element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
+                    element.style.backgroundSize = 'contain';
+                    element.textContent ='';
+                    element.classList.add('bingoAnimation');
+              }
+            )
+            }
+            if(divSquare5.classList.contains('magic') && divSquare9.classList.contains('magic') && divSquare17.classList.contains('magic') && divSquare21.classList.contains('magic')){
+              congratulations.forEach((element,conIndex)=>{                
+                console.log(element);
+                    element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
+                    element.style.backgroundSize = 'contain';
+                    element.textContent ='';
+                    element.classList.add('bingoAnimation');
+              }
+            )
+            }
+      }
+      )
+    }
 
-let MAXNUMBER = 24
+  }
+
+
+
+let MAXNUMBER = 24;
 let main = document.getElementById('main');
 let button = document.querySelector('#button');
 let history = document.getElementById('history');
