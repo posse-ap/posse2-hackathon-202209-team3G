@@ -24,7 +24,6 @@ for(let i = 1; i <= MAX_NUMBER; i++){
 }
 
 const outer = document.getElementById('outer');
-let aryIndex;
 for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
   let divSquare = document.createElement('div');
   divSquare.classList.add(`square`,`square${i}`);
@@ -47,11 +46,10 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
         div.style.backgroundSize = 'contain';
         div.textContent ='';
         congratulations = [...document.querySelectorAll('.val')];
-        console.log(divSquare);
-            divSquare.classList.add('magic');
+        divSquare.classList.add('magic');
+          const animationTimeout = function(){
             if(divSquare1.classList.contains('magic') && divSquare2.classList.contains('magic') && divSquare3.classList.contains('magic') && divSquare4.classList.contains('magic') && divSquare5.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
-                console.log(element);
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
                     element.style.backgroundSize = 'contain';
                     element.textContent ='';
@@ -61,7 +59,6 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
             }
             if(divSquare6.classList.contains('magic') && divSquare7.classList.contains('magic') && divSquare8.classList.contains('magic') && divSquare9.classList.contains('magic') && divSquare10.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
-                console.log(element);
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
                     element.style.backgroundSize = 'contain';
                     element.textContent ='';
@@ -71,7 +68,6 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
             }
             if(divSquare11.classList.contains('magic') && divSquare12.classList.contains('magic') && divSquare14.classList.contains('magic') && divSquare15.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
-                console.log(element);
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
                     element.style.backgroundSize = 'contain';
                     element.textContent ='';
@@ -80,8 +76,7 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
             )
             }
             if(divSquare16.classList.contains('magic') && divSquare17.classList.contains('magic') && divSquare18.classList.contains('magic') && divSquare19.classList.contains('magic') && divSquare20.classList.contains('magic')){
-              congratulations.forEach((element,conIndex)=>{                
-                console.log(element);
+              congratulations.forEach((element,conIndex)=>{   
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
                     element.style.backgroundSize = 'contain';
                     element.textContent ='';
@@ -91,7 +86,6 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
             }
             if(divSquare21.classList.contains('magic') && divSquare22.classList.contains('magic') && divSquare23.classList.contains('magic') && divSquare24.classList.contains('magic') && divSquare25.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
-                console.log(element);
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
                     element.style.backgroundSize = 'contain';
                     element.textContent ='';
@@ -101,7 +95,6 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
             }
             if(divSquare1.classList.contains('magic') && divSquare6.classList.contains('magic') && divSquare11.classList.contains('magic') && divSquare16.classList.contains('magic') && divSquare21.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
-                console.log(element);
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
                     element.style.backgroundSize = 'contain';
                     element.textContent ='';
@@ -111,7 +104,6 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
             }
             if(divSquare2.classList.contains('magic') && divSquare7.classList.contains('magic') && divSquare12.classList.contains('magic') && divSquare17.classList.contains('magic') && divSquare22.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
-                console.log(element);
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
                     element.style.backgroundSize = 'contain';
                     element.textContent ='';
@@ -121,7 +113,6 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
             }
             if(divSquare3.classList.contains('magic') && divSquare8.classList.contains('magic') && divSquare18.classList.contains('magic') && divSquare23.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
-                console.log(element);
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
                     element.style.backgroundSize = 'contain';
                     element.textContent ='';
@@ -131,7 +122,6 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
             }
             if(divSquare4.classList.contains('magic') && divSquare9.classList.contains('magic') && divSquare14.classList.contains('magic') && divSquare19.classList.contains('magic') && divSquare24.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
-                console.log(element);
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
                     element.style.backgroundSize = 'contain';
                     element.textContent ='';
@@ -141,7 +131,6 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
             }
             if(divSquare5.classList.contains('magic') && divSquare10.classList.contains('magic') && divSquare15.classList.contains('magic') && divSquare20.classList.contains('magic') && divSquare25.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
-                console.log(element);
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
                     element.style.backgroundSize = 'contain';
                     element.textContent ='';
@@ -151,7 +140,6 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
             }
             if(divSquare1.classList.contains('magic') && divSquare7.classList.contains('magic') && divSquare19.classList.contains('magic') && divSquare25.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
-                console.log(element);
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
                     element.style.backgroundSize = 'contain';
                     element.textContent ='';
@@ -161,7 +149,6 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
             }
             if(divSquare5.classList.contains('magic') && divSquare9.classList.contains('magic') && divSquare17.classList.contains('magic') && divSquare21.classList.contains('magic')){
               congratulations.forEach((element,conIndex)=>{                
-                console.log(element);
                     element.style.backgroundImage = `url(./img/bingoBack${conIndex + 1}.jpg)`;
                     element.style.backgroundSize = 'contain';
                     element.textContent ='';
@@ -169,10 +156,11 @@ for(let i = 1; i <= COLUMN_LENGTH * ROW_LENGTH; i++){
               }
             )
             }
+          }
+          setTimeout(animationTimeout,3000);
       }
       )
     }
-
   }
 
 
@@ -182,39 +170,34 @@ let main = document.getElementById('main');
 let button = document.querySelector('#button');
 let history = document.getElementById('history');
 let historyArray = [];
-// let tarrgetNumber = [];
-// for(let i = 1; i <= MAX_NUMBER; i++){
-//   targetNumber.push(i);
-// }
 
 // お題のオブジェクト
 const suggestObj = {
   1:`全員の共通点を3つみつけよう！`,
   2:`MBTI診断をみんなでやってみる`,
-  3:`パーソナルカラー診断をする`,
-  4:`全員と2ショットをとる。or 皆でスクショを撮る`,
-  5:`経験したことのあるスポーツについて共有する`,
-  6:`二人組になってみんなにペアの人を紹介する（他己紹介）`,
-  7:`カメラロールで最新の画像を見せる`,
-  8:`16Personalities(性格診断）をみんなでやる`,
-  9:`自分の好きなご飯やさんの情報を共有する`,
-  10:`読んでよかった本を紹介する`,
-  11:`好きな土地の紹介`,
-  12:`地元の紹介をする`,
-  13:`自分史を4分間なるべく詳しく説明してみる`,
-  14:`背中の後ろで手を繋げる？チャレンジ！！`,
+  3:`お金のことを考えなくていいなら何したい？`,
+  4:`全員と2ショットを撮るor皆でスクショを撮る`,
+  5:`小さい頃の将来の夢を話す`,
+  6:`右隣の人の第一印象を話す`,
+  7:`テンションが上がる瞬間は？`,
+  8:`捨てられない思い出のものは？`,
+  9:`高校生の頃の一番楽しかった思い出について話す`,
+  10:`おすすめの〇〇を紹介する（本・映画など）`,
+  11:`夏休みの一番の思い出を話す`,
+  12:`言われたことのあるあだ名は？`,
+  13:`今一番行ってみたい場所は？`,
+  14:`POSSEに入った理由を話す`,
   15:`誰にでもなれるとしたら誰になりたい？`,
-  16:`将来のことについて15分間話す。or 目標を宣言する`,
-  17:`遊びの計画を立てる`,
-  18:`自分しか知らなそうな豆知識を披露する！`,
+  16:`死ぬまでに一度はしてみたいこと`,
+  17:`この夏一番聴いた曲は？`,
+  18:`休みの日は何してる？`,
   19:`苦手なところを一つ克服できるとしたら何？`,
-  20:`共通の友人探し！相手と意外な共通の知人がいるかも...`,
-  21:`その場にいる人と絵しりとり`,
-  22:`相手の似顔絵を書く`,
-  23:`ラインとインスタを交換する`,
-  24:`コンビニで小学生のときに一番食べていたお菓子を買うor紹介`,
+  20:`今までにもらった最高のプレゼントは？`,
+  21:`忘れらない夢（夜の夢）は？`,
+  22:`子供のころはどんな子だった？`,
+  23:`一番怖いものは？`,
+  24:`小さいころ好きだった駄菓子は？`,
 }
-
 let timerId;
 
 // お題表示
@@ -235,21 +218,20 @@ button.onclick = () => {
   if(button.textContent === 'スタート'){
     button.textContent = 'ストップ';
     timerId = setInterval( () => {
-      let targetIndex = Math.floor(Math.random() * targetNumber.length) ;  
-      main.textContent = targetNumber[targetIndex];
+    let targetIndex = Math.floor(Math.random() * targetNumber.length);
+    main.textContent = targetNumber[targetIndex];
     }, 100)
   }else{
     button.textContent = 'スタート';
     clearInterval(timerId); 
-    let targetIndex = targetNumber.indexOf(Number(main.textContent));   
+    let targetIndex = targetNumber.indexOf(Number(main.textContent));
     targetNumber.splice(targetIndex, 1);
     historyArray.push(main.textContent);
     history.textContent = historyArray;
 
   suggest.style.display = '';
-  suggest.innerHTML = `${suggestObj[targetIndex]}`;
+  suggest.innerHTML = `${suggestObj[Number(main.textContent)]}`;
   }
-
 }
 
 const divSquare1 = document.querySelector('.square1');

@@ -1,0 +1,314 @@
+
+.wrapper{
+  padding-top: 100px;
+  font-size:18px;
+  font-weight:bold;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0px 30px;
+  gap: 474px;
+  position: relative;
+  width: 95vw;
+  height: 80px;
+  position: fixed;
+  z-index: 1000;
+}
+
+/* ↓ここからハンバーガーメニュー */
+#nav{
+  position: absolute;
+  top: 0;
+  /*ナビメニューを左に隠した状態になる*/
+  left: -40%;
+  width: 40%;
+  height: 100vh;
+  background: #666;
+  /*０.7秒かけてナビメニューがスライドする*/
+  transition: .7s;
+}
+#nav ul{
+  padding-top: 80px;
+}
+#nav ul li{
+  list-style-type: none;
+  font-size: 20px;
+}
+#nav a{
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  margin: 0 15px;
+  padding: 10px;
+  transition: .5s;
+}
+#nav li a:hover{
+  color: #666;
+  background: #cd5c5c;
+  border-bottom: none;
+}
+#hamburger {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 50px;
+  height: 44px;
+  cursor: pointer;
+  transition: 1s;
+}
+.inner_line {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #666;
+  transition: 1s;
+  border-radius: 4px;
+}
+#line1 {
+  top: 0;
+}
+#line2 {
+  top: 20px;
+}
+#line3 {
+  bottom: 0px;
+}
+.in{
+  transform: translateX(100%);
+}
+.line_1,.line_2,.line_3{
+  background: #000000;
+}
+.line_1 {
+  /*-45度回転させる*/
+  transform: rotate(-45deg);
+  top: 0;
+}
+.line_2 {
+  opacity: 0;
+}
+.line_3 {
+  /*45度回転させる*/
+  transform: rotate(45deg);
+  bottom: 0;}
+
+.keyVisual{
+  text-align: center;
+  padding-top:90px;
+  position: relative;
+}
+.keyImage{
+  width:70%;
+  height:70%;
+  text-align: center;
+}
+.keyVisualtext{
+  font-size:40px;
+  top: 320px;
+  left:440px;
+  position:absolute;
+  color:blue;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+  width:94%;
+  margin:0 auto;
+}
+
+.slider img {
+  width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height:auto;
+}
+
+.slider .slick-slide {
+transform: scale(0.8);/*左右の画像のサイズを80%に*/
+transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+  position: absolute;/*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;/*マウスカーソルを指マークに*/
+  outline: none;/*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666;/*矢印の色*/
+  border-right: 2px solid #666;/*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align:center;
+margin:20px 0 0 0;
+}
+
+.slick-dots li {
+  display:inline-block;
+margin:0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width:8px;/*ドットボタンのサイズ*/
+  height:8px;/*ドットボタンのサイズ*/
+  display:block;
+  border-radius:50%;
+  background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+  background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+.bingoDiscription-title{
+  text-align: center;
+}
+.title ,.ruleTitle{
+  color: #505050;/*文字色*/
+  padding: 0.5em;/*文字周りの余白*/
+  display: inline-block;/*おまじない*/
+  line-height: 1.3;/*行高*/
+  background: #dbebf8;/*背景色*/
+  vertical-align: middle;
+  border-radius: 25px 0px 0px 25px;/*左側の角を丸く*/
+  margin-top:30px;
+  margin-bottom:30px;
+  font-size:50px;
+  font-weight:bold;
+}
+.title:before ,.ruleTitle:before{
+  content: '●';
+  color: white;
+  margin-right: 8px;
+}
+.bingoDiscription-title p{
+  font-size:15px;
+  text-align: left;
+  padding-left: 100px;
+  padding-right:100px;
+  font-weight: bold;
+}
+.ruleTitle{
+  text-align: center;
+  margin:0auto;
+  font-weight: bold;
+  font-size:30px;
+}
+.q{
+  text-align: center;
+  width: 80%;
+  padding:0 60px;
+  margin:0 auto;
+  padding-bottom: 100px;
+}
+.ruleContainer{
+  text-align: center;
+}
+.s{
+  width:100%;
+  height:auto;
+}
+.bingoWrapper{
+  display:flex;
+  text-align: center;
+  margin: auto;
+}
+.bingoImg{
+  width:160px;
+  height:170px;
+  padding-right: 20px;
+}
+.i{
+  text-align: center;
+}
+body{
+  padding:0,50px;
+  background-color:#eacbcb;
+}
+
+ul li{
+  text-align: left;
+}
+
+.bingoWrapper{
+  background-color:whitesmoke;
+  border-radius:30px;
+  width:60%;
+}
+.b::before{
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid black;
+  
+}
+
+.ruleText{
+  align-self: center;
+}
+.s{
+  border-radius:30px 0 0 30px;
+  height:100%;
+}
+.bingoImg{
+  height:100%;
+}
+.topp{
+  width: 250px;
+  height: 60px;
+position: fixed;
+right: 0;
+bottom: 0;
+margin-bottom: 5px;
+background: #5CB85C;
+opacity: 0.6;
+border-radius: 30px;
+font-weight: bold;
+color:black;
+}
+.topp a{
+  padding-top:30px;
+  text-decoration: none;
+  line-height: 5px;
+  position: absolute;
+  padding-left: 46px;
+}
