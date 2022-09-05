@@ -453,6 +453,6 @@ bottom: -550px;
     
     .bound1 span:nth-child(5), .bound2 span:nth-child(5){	left: 80%; animation: bound-anim 0.8s 0.4s infinite;}
     
-    .bound1 span:nth-child(6), .bound2 span:nth-child(6){ left: 100%; animation: bound-anim 0.8s 0.5s infinite;}
+    .bound1 span:nth-child(6), .bound2 span:nth-child(6){ left: 90%; animation: bound-anim 0.8s 0.5s infinite;}
 }
 
